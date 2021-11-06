@@ -1,7 +1,7 @@
 class Admin::CategoriesController < ApplicationController
 
   layout 'admin_layout'
-  before_action :set_category, only: [:show, :edit, :update, :delete]
+  before_action :set_category, only: [:show, :edit, :update, :destroy]
   def index
     @categories = Category.all
   end
@@ -47,8 +47,8 @@ class Admin::CategoriesController < ApplicationController
   def set_category
     @category = Category.find(params[:id])
   rescue
-    flash[:set_category_error] = "Could not find that record"
-    #redirect_to admin_categories_path
+  flash[:set_category_error] = "Could not find that record"
+    redirect_to admin_categories_path
   end
 
 end
