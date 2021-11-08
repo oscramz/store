@@ -5,3 +5,32 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Status.create([
+    { description: 'Accepted' },
+    { description: 'Rejected' },
+    { description: 'Canceled' },
+    { description: 'Delivered' },
+    { description: 'Authorized' }
+])
+    puts "🥇 Statuses created!"
+
+Category.create([
+    { name: 'Technology' },
+    { name: 'Cars' },
+    { name: 'Home & Garden' },
+    { name: 'Food' },
+    { name: 'Entertainment' }
+])
+    puts "📚 Categories created!"
+
+Role.create([
+    { name: 'Admin' },
+    { name: 'Client' }
+])
+    puts "🏹 Rols created!"
+
+User.create([
+    { username: 'admin', password: 'admin', password_confirmation: 'admin', role: Role.find_by(name: 'Admin') }
+])
+    puts "👨‍👩‍👧‍👧 Users created!"
