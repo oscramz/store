@@ -1,0 +1,15 @@
+<div class="card">
+    <div class="card-body">
+<%= form_with(model: [:admin, base_statuses]) do |form| %>
+
+    <div class="mb-3">
+    <%= form.label            :description, class: 'form-label' %>
+    <%= form.text_field       :description, class: 'form-control' %>
+    <% if base_statuses.errors[:description].any? %>
+        <div>
+            <%= base_statuses.errors[:description].first %>
+        </div>
+    <% end %>
+    </div>
+    <%= form.submit class: 'btn btn-primary' %>
+<% end %>
