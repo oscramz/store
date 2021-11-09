@@ -49,7 +49,7 @@ class Admin::StatusesController < ApplicationController
   end
   
   def params_statuses
-    params.require(:statuses).permit(:description)
+    params.require(:status).permit(:description)
   end
   
 end

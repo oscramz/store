@@ -20,23 +20,17 @@
             <% end %>
         </li>
         <li>
-            <a href="#" class="nav-link text-white">
+            <%= link_to admin_roles_path, class: "nav-link text-white" do %>
                 <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
-                Products
-            </a>
+                Roles
+            <% end %>
         </li>
         <li>
-            <a href="#" class="nav-link text-white">
-                <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
-                Orders
-            </a>
-        </li>
-        <!-- <li>
-            <a href="#" class="nav-link text-white">
+            <%= link_to admin_statuses_path, class: "nav-link text-blank" do %>
                 <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-                Users
-            </a>
-        </li> -->
+                Statuses
+            <% end %>
+        </li>
     </ul>
     <hr>
     <div class="dropdown">

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-
+  
+  get     'pages/home'
   namespace :admin do
     get     'categories',           to: 'categories#index',   as: 'categories'
     get     'categories/new',       to: 'categories#new',     as: 'new_category'
@@ -32,8 +33,6 @@ Rails.application.routes.draw do
     put     'statuses/:id',           to: 'statuses#update'
     patch   'statuses/:id',           to: 'statuses#update'
     delete  'statuses/:id',           to: 'statuses#destroy'
-    
-    
-    get     'pages/home'
+
   end
 end
