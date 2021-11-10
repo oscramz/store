@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   
 
-  get     'pages/home'
+  root     'pages#home'
+  
   namespace :admin do
     get     'categories',           to: 'categories#index',   as: 'categories'
     get     'categories/new',       to: 'categories#new',     as: 'new_category'

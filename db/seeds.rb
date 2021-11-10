@@ -15,7 +15,7 @@ Status.create([
 ])
     puts "🥇 Statuses created!"
 
-Category.create([
+@categories = Category.create([
     { name: 'Technology' },
     { name: 'Cars' },
     { name: 'Home & Garden' },
