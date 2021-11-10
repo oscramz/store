@@ -20,6 +20,12 @@
             <% end %>
         </li>
         <li>
+            <%= link_to admin_products_path, class: "nav-link text-white" do %>
+                <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+                Products
+            <% end %>
+        </li>
+        <li>
             <%= link_to admin_roles_path, class: "nav-link text-white" do %>
                 <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
                 Roles
