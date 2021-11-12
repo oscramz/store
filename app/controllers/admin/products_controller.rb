@@ -3,7 +3,7 @@ class Admin::ProductsController < ApplicationController
   layout 'admin_layout'
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   def index
-    @products = Product.all
+    @products = Product.includes(:category)
   end
 
   def new

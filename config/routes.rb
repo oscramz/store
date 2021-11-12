@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   
 
   root     'pages#home'
+  get      '/cart',                 to: 'pages#cart',         as: 'cart'
   
   namespace :admin do
     get     'categories',           to: 'categories#index',   as: 'categories'
