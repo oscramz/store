@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   
 
-  root     'pages#home'
-  get      '/cart',                 to: 'pages#cart',         as: 'cart'
+  root     'pages#show'
+  get      '/cart',                 to: 'carts#show',         as: 'cart'
+  post     '/carts/:id_product',    to: 'carts#add_product',  as: 'add_product_to_cart'
   
   namespace :admin do
     get     'categories',           to: 'categories#index',   as: 'categories'
